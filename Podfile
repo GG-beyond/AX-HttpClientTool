@@ -2,9 +2,7 @@
 # platform :ios, '9.0'
 
 target 'AX-HttpClientTool' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
-
-  # Pods for AX-HttpClientTool
+      pod 'CTMediator', '~> 12'
+      pod 'AFNetworking', '~> 3.1.0'
 
 end

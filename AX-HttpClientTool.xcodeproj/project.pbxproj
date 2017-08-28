@@ -14,9 +14,12 @@
 		7EE608F01F540DAF00CB9173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EE608EF1F540DAF00CB9173 /* Assets.xcassets */; };
 		7EE608F31F540DAF00CB9173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE608F11F540DAF00CB9173 /* LaunchScreen.storyboard */; };
 		7EE608FD1F540DEE00CB9173 /* AXHttpClientTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE608FC1F540DEE00CB9173 /* AXHttpClientTool.m */; };
+		E6579512ED0929A47458B8FB /* libPods-AX-HttpClientTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7908FB9194E5FC7BDA0617FC /* libPods-AX-HttpClientTool.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		170949F0464C634EF450692F /* Pods-AX-HttpClientTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AX-HttpClientTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-AX-HttpClientTool/Pods-AX-HttpClientTool.release.xcconfig"; sourceTree = "<group>"; };
+		7908FB9194E5FC7BDA0617FC /* libPods-AX-HttpClientTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AX-HttpClientTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE608E01F540DAF00CB9173 /* AX-HttpClientTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AX-HttpClientTool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE608E41F540DAF00CB9173 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EE608E61F540DAF00CB9173 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		7EE608F41F540DAF00CB9173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EE608FB1F540DEE00CB9173 /* AXHttpClientTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXHttpClientTool.h; sourceTree = "<group>"; };
 		7EE608FC1F540DEE00CB9173 /* AXHttpClientTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXHttpClientTool.m; sourceTree = "<group>"; };
+		882A0A3EBCD4DFD9CFBC1F7A /* Pods-AX-HttpClientTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AX-HttpClientTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AX-HttpClientTool/Pods-AX-HttpClientTool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6579512ED0929A47458B8FB /* libPods-AX-HttpClientTool.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3180AF7A97B26A2EEF40D954 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				882A0A3EBCD4DFD9CFBC1F7A /* Pods-AX-HttpClientTool.debug.xcconfig */,
+				170949F0464C634EF450692F /* Pods-AX-HttpClientTool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C67E803E14512BCDD39CB46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7908FB9194E5FC7BDA0617FC /* libPods-AX-HttpClientTool.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7EE608D71F540DAF00CB9173 = {
 			isa = PBXGroup;
 			children = (
 				7EE608E21F540DAF00CB9173 /* AX-HttpClientTool */,
 				7EE608E11F540DAF00CB9173 /* Products */,
+				3180AF7A97B26A2EEF40D954 /* Pods */,
+				5C67E803E14512BCDD39CB46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EE608F71F540DAF00CB9173 /* Build configuration list for PBXNativeTarget "AX-HttpClientTool" */;
 			buildPhases = (
+				7EC5797F4F28B5B2CC5E296B /* [CP] Check Pods Manifest.lock */,
 				7EE608DC1F540DAF00CB9173 /* Sources */,
 				7EE608DD1F540DAF00CB9173 /* Frameworks */,
 				7EE608DE1F540DAF00CB9173 /* Resources */,
+				4FB335C570C45BC41A8CCA9F /* [CP] Embed Pods Frameworks */,
+				E1F04766830B5209BBCA6401 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +185,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FB335C570C45BC41A8CCA9F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AX-HttpClientTool/Pods-AX-HttpClientTool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EC5797F4F28B5B2CC5E296B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AX-HttpClientTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1F04766830B5209BBCA6401 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AX-HttpClientTool/Pods-AX-HttpClientTool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7EE608DC1F540DAF00CB9173 /* Sources */ = {
@@ -285,6 +363,7 @@
 		};
 		7EE608F81F540DAF00CB9173 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 882A0A3EBCD4DFD9CFBC1F7A /* Pods-AX-HttpClientTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2WF494FH62;
@@ -297,6 +376,7 @@
 		};
 		7EE608F91F540DAF00CB9173 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 170949F0464C634EF450692F /* Pods-AX-HttpClientTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2WF494FH62;

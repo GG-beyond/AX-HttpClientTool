@@ -25,6 +25,8 @@ Pod::Spec.new do |s|
 
   s.source_files  =  "AX-HttpClientTool/AX-HttpClientTool/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
+ # s.dependency  "AFNetworking"
+ # s.dependency   'Categories-AX'
 
  
 end

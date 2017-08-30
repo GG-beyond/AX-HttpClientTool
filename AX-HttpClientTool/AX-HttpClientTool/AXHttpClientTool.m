@@ -7,8 +7,6 @@
 //
 
 #import "AXHttpClientTool.h"
-#import <Categories-AX/NSString+PYMD5.h>
-#import <AFNetworking/AFNetworking.h>
 
 NSString * const PYRequestBaseUrlString = @"http://alpha.i.anxindeli.com/";
 NSString * const kPrivateKey = @"anxindeli_a100_hongtaoA";

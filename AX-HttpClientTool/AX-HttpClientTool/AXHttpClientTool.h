@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Categories-AX/NSString+PYMD5.h>
-#import <AFNetworking/AFNetworking.h>
 
 typedef void (^HttpRequestSuccess)(id JSON);
 typedef void (^HttpRequestFailure)(NSError *error);

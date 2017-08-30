@@ -7,7 +7,8 @@
 //
 
 #import "AXHttpClientTool.h"
-
+#import <AFNetworking.h>
+#import <NSString+PYMD5.h>
 NSString * const PYRequestBaseUrlString = @"http://alpha.i.anxindeli.com/";
 NSString * const kPrivateKey = @"anxindeli_a100_hongtaoA";
 
@@ -23,7 +24,7 @@ NSString * const kPrivateKey = @"anxindeli_a100_hongtaoA";
     
     return _sharedTool;
 }
-/*
+
 + (AFHTTPSessionManager *)sharedHTTPClient{
     
     static AFHTTPSessionManager *_axHTTPClient = nil;
@@ -37,6 +38,7 @@ NSString * const kPrivateKey = @"anxindeli_a100_hongtaoA";
     return _axHTTPClient;
     
 }
+
 + (NSURLSessionDataTask *)requestWithMethod:(NSString *)method url:(NSString *)url params:(NSDictionary *)params success:(HttpRequestSuccess)success failure:(HttpRequestFailure)failure
 {
     __weak typeof(self) weakSelf = self;
@@ -106,6 +108,7 @@ NSString * const kPrivateKey = @"anxindeli_a100_hongtaoA";
 + (NSURLSessionDataTask *)PUT:(NSString *)path params:(NSDictionary *)params success:(HttpRequestSuccess)success failure:(HttpRequestFailure)failure{
     return [self requestWithMethod:@"PUT" url:path params:params success:success failure:failure];
 }
+
 #pragma mark -
 #pragma mark - 对参数加盐
 + (NSString *)saltRequestComponent:(NSDictionary *)dict
@@ -175,6 +178,7 @@ NSString * const kPrivateKey = @"anxindeli_a100_hongtaoA";
         return originUrlString;
     }
 }
+ 
 + (void)netWorkStatus{
     
     //检测网络状态
@@ -195,5 +199,5 @@ NSString * const kPrivateKey = @"anxindeli_a100_hongtaoA";
     }];
     
 }
- */
+ 
 @end
